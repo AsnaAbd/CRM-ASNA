@@ -1,8 +1,8 @@
 <header class="fixed-top">
   <app-icon-nav *ngIf="!open" (click)="toggle()"></app-icon-nav>
   <app-icon-close *ngIf="open" (click)="toggle()"></app-icon-close>
-  <!-- <ng-content select=".header"></ng-content> -->
-  header contents
+  <ng-content select=".header"></ng-content> 
+  
 </header>
 <main  [ngClass]="{'close-aside': !open}">
 
@@ -12,7 +12,7 @@
 
   <aside>
     <div class="scroller">
-      <!-- <ng-content select=".nav"></ng-content> -->
+       <ng-content select=".nav"></ng-content> 
       nav contents
     </div>
   </aside>
@@ -25,7 +25,7 @@
     </div>
 
     <footer>
-      <!-- <ng-content select=".footer"></ng-content> -->
+      <ng-content select=".footer"></ng-content> 
       footer contents
     </footer>
 
