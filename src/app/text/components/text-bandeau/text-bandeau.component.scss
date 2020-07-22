@@ -1,0 +1,38 @@
+@import 'fonts';
+@import 'theme';
+
+app-text-bandeau {
+  h1 {
+    font-size: $h1-fz;
+    color: $light-color;
+  }
+  h2 {
+    font-size: $h2-fz;
+    color:  $light-color;
+  }
+  h3 {
+    font-size: $h3-fz;
+    color:  $light-color;
+  }
+  p, a, span, li {
+    font-size: $regular-fz;
+    color:  $light-color
+  }
+}
+// colors
+// app-text {
+//   .white {
+//     h1 {
+//       color: $light-color;
+//     }
+//     h2 {
+//       color: $light-color;
+//     }
+//     h3 {
+//       color: $light-color;
+//     }
+//     p, a, span, li {
+//       color: $light-color
+//     }
+//   }
+// }

@@ -9,13 +9,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [FooterComponent, HeaderComponent, NavComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    TextModule,
+    RouterModule
   ],
   exports: [
     LoginModule,
