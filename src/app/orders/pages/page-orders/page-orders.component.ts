@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OrdersService } from '../../services/orders.service';
 import { Order } from 'src/app/shared/models/order';
+import { OrdersService } from '../../services/orders.service';
 
 @Component({
   selector: 'app-page-orders',
@@ -28,5 +28,13 @@ export class PageOrdersComponent implements OnInit {
       'Total TTC',
       'State'
     ];
+  }
+  public totalHT(item : Order): number{
+    console.log('TOTAL HT CALLED');
+    return item.nbJours*item.tjmHt;
+  }
+  public totalTTC(item : Order): number{
+    return this.totalHT(item) + item.tva/100;
+    console.log('TOTAL TTC CALLED');
   }
 }

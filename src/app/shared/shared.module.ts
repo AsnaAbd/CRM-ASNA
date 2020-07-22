@@ -3,18 +3,20 @@ import { CommonModule } from '@angular/common';
 import { TemplatesModule } from '../templates/templates.module';
 import { TextModule } from '../text/text.module';
 import { LibraryModule } from '../library/library.module';
+import { TotalPipe } from './pipes/total.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [TotalPipe],
   imports: [
     CommonModule
   ],
   exports: [
     TemplatesModule,
     TextModule,
-    LibraryModule
+    LibraryModule,
+    TotalPipe
   ]
 })
 export class SharedModule { }
