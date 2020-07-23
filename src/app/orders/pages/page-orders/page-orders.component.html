@@ -1,23 +1,26 @@
 <app-template-one-col>
-    <app-text-bandeau class="title">
-      <h1>All Orders</h1>
-    </app-text-bandeau>
-    <ng-container class="contents">
-      <!-- {{ collection | json }} -->
-      <app-table-light *ngIf="collection" [headers]="headers">
-        <tr *ngFor="let item of collection">
-          <td>{{ item.typePresta }}</td>
-          <td>{{ item.client }}</td>
-          <td>{{ item.nbJours }}</td>
-          <td>{{ item.tjmHt | currency: 'EUR' }}</td>
-          <td>{{ item.tjmHt | total: item.nbJours | currency: 'EUR' }}</td>
-          <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency: 'EUR' }}</td>
-          <td  [appState]="item.state">
-              <select (change)="changeState(item, $event)">
-                  <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{state}}</option>
-              </select>
-          </td>
-        </tr>
-      </app-table-light>
-    </ng-container>
-  </app-template-one-col>
+  <app-text-bandeau class="title">
+    <h1>All Orders</h1>
+  </app-text-bandeau>
+  <ng-container class="contents">
+    <!-- {{ collection | json }} -->
+    <app-table-light *ngIf="collection" [headers]="headers">
+      <tr *ngFor="let item of collection">
+        <td>{{ item.typePresta }}</td>
+        <td>{{ item.client }}</td>
+        <td>{{ item.nbJours }}</td>
+        <td>{{ item.tjmHt | currency: 'EUR' }}</td>
+        <td>{{ item.tjmHt | total: item.nbJours | currency: 'EUR' }}</td>
+        <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency: 'EUR' }}</td>
+        <td [appState]="item.state">
+          <select (change)="changeState(item, $event)">
+            <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
+          </select>
+        </td>
+      </tr>
+    </app-table-light>
+    <app-button label="Add an order" route="add"></app-button>
+    <app-button label="Google" href="http://www.google.fr"></app-button>
+    <app-button label="Action" [action]="true" (clicked)="popup()"></app-button>
+  </ng-container>
+</app-template-one-col>

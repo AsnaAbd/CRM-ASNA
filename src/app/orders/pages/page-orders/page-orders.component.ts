@@ -14,7 +14,7 @@ export class PageOrdersComponent implements OnInit {
   public states = Object.values(StateOrder);
 
   constructor(private os: OrdersService) { }
-  
+
   ngOnInit(): void {
     this.os.collection.subscribe(
       (datas) => {
@@ -38,5 +38,12 @@ export class PageOrdersComponent implements OnInit {
     this.os.changeState(item, event.target.value).subscribe((res) => {
       item.state = res.state;
     });
+  }
+
+  /**
+   * popup
+   */
+  public popup() {
+    console.log("open popup");
   }
  }
