@@ -4,7 +4,7 @@
   </app-text-bandeau>
   <ng-container class="contents">
     <!-- {{ collection | json }} -->
-    <app-table-light *ngIf="collection" [headers]="headers">
+    <app-table-dark *ngIf="collection" [headers]="headers">
       <tr *ngFor="let item of collection">
         <td>{{ item.typePresta }}</td>
         <td>{{ item.client }}</td>
@@ -18,7 +18,7 @@
           </select>
         </td>
       </tr>
-    </app-table-light>
+    </app-table-dark>
     <app-button label="Add an order" route="add"></app-button>
     <app-button label="Google" href="http://www.google.fr"></app-button>
     <app-button label="Action" [action]="true" (clicked)="popup()"></app-button>

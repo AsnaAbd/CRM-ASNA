@@ -21,5 +21,7 @@ l'`encapsulation` => mode emulated et le None quand on veut avoir un fichier de 
 
 ## Life cycles :
 
+## Router events :
 
-Router events :
+## outils=>Extension à installer sur VS code
+Auto Rename Tag
