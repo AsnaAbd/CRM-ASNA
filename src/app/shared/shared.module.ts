@@ -7,6 +7,7 @@ import { TotalPipe } from './pipes/total.pipe';
 import { StateDirective } from './directives/state.directive';
 import { TotalTTCPipe } from './pipes/total-ttc.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TotalPipe,
     TotalTTCPipe,
     StateDirective,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconsModule
   ]
 })
 export class SharedModule { }
