@@ -4,7 +4,7 @@
       "tjmHt": 700,
       "nbJours": 5,
       "tva": 20,
-      "state": "CANCELED",
+      "state": "CONFIRMED",
       "typePresta": "Formation2",
       "client": "Atos",
       "comment": "Comment pour Atos",
@@ -19,6 +19,36 @@
       "client": "Cnam",
       "comment": "Merci beaucoup",
       "id": 5
+    },
+    {
+      "tjmHt": 5000,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "Super",
+      "client": "myclient",
+      "comment": "mycomment",
+      "id": 6
+    },
+    {
+      "tjmHt": 5000,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "mypresta",
+      "client": "ourclient",
+      "comment": "",
+      "id": 7
+    },
+    {
+      "tjmHt": 5000,
+      "nbJours": 5,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "Presta",
+      "client": "Atos",
+      "comment": "Formation",
+      "id": 8
     }
   ],
   "clients": [

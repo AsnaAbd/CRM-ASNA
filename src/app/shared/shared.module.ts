@@ -6,6 +6,7 @@ import { LibraryModule } from '../library/library.module';
 import { TotalPipe } from './pipes/total.pipe';
 import { StateDirective } from './directives/state.directive';
 import { TotalTTCPipe } from './pipes/total-ttc.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,8 @@ import { TotalTTCPipe } from './pipes/total-ttc.pipe';
     LibraryModule,
     TotalPipe,
     TotalTTCPipe,
-    StateDirective
+    StateDirective,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

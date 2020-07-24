@@ -32,4 +32,8 @@ export class OrdersService {
 public update(item: Order): Observable<Order> {
   return this.http.put<Order>(`${environment.urlApi}/orders/${item.id}`, item);
 }
+// add item in collection
+public addItem(item: Order): Observable<Order> {
+  return this.http.post<Order>(`${environment.urlApi}/orders`, item);
+}
 }

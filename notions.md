@@ -25,3 +25,5 @@ l'`encapsulation` => mode emulated et le None quand on veut avoir un fichier de 
 
 ## outils=>Extension à installer sur VS code
 Auto Rename Tag
+TO DO+
+Angular Essentials (V9)
