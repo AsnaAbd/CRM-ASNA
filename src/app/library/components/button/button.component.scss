@@ -14,3 +14,7 @@ a, button {
     background: darken($color1, 10);
   }
 }
+
+:host-context(.theme2) a, :host-context(.theme2) button  {
+  background: $color2;
+}

@@ -1,4 +1,9 @@
 <app-text-pages>
-    <h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
+  <span *ngIf="theme" [appState]="theme">
+    <select (change)="changeTheme($event)">
+      <option value="theme1">theme 1</option>
+      <option value="theme2">theme 2</option>
+    </select>
+  </span>
 </app-text-pages>
-

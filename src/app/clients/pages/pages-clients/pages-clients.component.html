@@ -1,1 +1,31 @@
-<p>pages-clients works!</p>
+<app-template-one-col>
+  <app-text-bandeau class="title">
+    <h1>All Clients</h1>
+  </app-text-bandeau>
+  <ng-container class="contents">
+    <!-- {{ collection | json }} -->
+    <app-table-light *ngIf="collection" [headers]="headers">
+      <tr *ngFor="let item of collection">
+        <td>{{ item.name }}</td>
+        <td>{{item.totalCaHt | currency: 'EUR' }}</td>
+        <td>{{ item.tva }}</td>
+        <td>{{ item.totalCaHt | totalTTC: item.totalCaHt: item.tva | currency: 'EUR' }}</td>
+
+        <td [appState]="item.state">
+          <select (change)="changeState(item, $event)">
+            <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
+          </select>
+
+        </td>
+        <td [appState]="item.state">
+          <select (change)="changeState(item, $event)">
+          <option value="state" [value]="'ACTIVE'">Theme1</option>
+          <option value="state" [value]="'INACTIVE'">Theme2</option>
+        </select></td>
+        <td>{{item.comment}}</td>
+      </tr>
+    </app-table-light>
+    <app-button label="Add an client" route="add"></app-button>
+
+  </ng-container>
+</app-template-one-col>

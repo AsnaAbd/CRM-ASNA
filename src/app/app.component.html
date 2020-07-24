@@ -1,5 +1,4 @@
-<app-ui>
-
+<app-ui [ngClass]="{'theme2': theme === 'theme2'}">
     <app-header class="header"></app-header>
     <app-nav class="nav"></app-nav>
     <router-outlet class="content"></router-outlet>

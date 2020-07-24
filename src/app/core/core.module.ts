@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginModule } from '../login/login.module';
-import { TextModule } from '../text/text.module';
-import { IconsModule } from '../icons/icons.module';
-import { UiModule } from '../ui/ui.module';
-import { TemplatesModule } from '../templates/templates.module';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IconsModule } from '../icons/icons.module';
+import { LoginModule } from '../login/login.module';
+import { SharedModule } from '../shared/shared.module';
+import { TemplatesModule } from '../templates/templates.module';
+import { TextModule } from '../text/text.module';
+import { UiModule } from '../ui/ui.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
-import { RouterModule } from '@angular/router';
 
 
 
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     TextModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   exports: [
     LoginModule,

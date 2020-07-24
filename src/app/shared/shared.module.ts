@@ -5,11 +5,12 @@ import { TextModule } from '../text/text.module';
 import { LibraryModule } from '../library/library.module';
 import { TotalPipe } from './pipes/total.pipe';
 import { StateDirective } from './directives/state.directive';
+import { TotalTTCPipe } from './pipes/total-ttc.pipe';
 
 
 
 @NgModule({
-  declarations: [TotalPipe, StateDirective],
+  declarations: [TotalPipe, StateDirective, TotalTTCPipe],
   imports: [
     CommonModule
   ],
@@ -18,6 +19,7 @@ import { StateDirective } from './directives/state.directive';
     TextModule,
     LibraryModule,
     TotalPipe,
+    TotalTTCPipe,
     StateDirective
   ]
 })

@@ -16,6 +16,9 @@ export class StateDirective implements OnChanges {
   private formatClass(state: string): string {
     return `state-${state.toLowerCase()}`;
   }
+  private formatClass1(theme: string): string {
+    return `theme-${theme.toLowerCase()}`;
+  }
 }
 
 // create a function return a string from a state
